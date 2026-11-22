@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPT-Live-1.1 · Order support</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">PRODUCTION PATH · CLIENT DELEGATION</p>
+        <h1>Order support that keeps listening.</h1>
+        <p class="lede">WebRTC audio and events connect to GPT-Live-1.1. Your trusted Node server holds the credential; this browser owns task state and your local order tools own the facts.</p>
+      </header>
+
+      <section class="controls" aria-label="Conversation controls">
+        <div class="buttons">
+          <button id="start" type="button">Start real conversation</button>
+          <button id="stop" type="button" class="secondary" disabled>Finish conversation</button>
+          <button id="mute" type="button" class="secondary" disabled>Mute input</button>
+        </div>
+        <div>
+          <p id="status" role="status">Not connected. OPENAI_API_KEY is required on the server for a real call.</p>
+          <p id="session-id" class="mono subtle">No Live session</p>
+        </div>
+        <div id="live-audio-controls" class="playback-controls" aria-label="Live assistant audio controls">
+          <button id="playback-toggle" type="button" class="secondary" disabled>Play audio</button>
+          <span id="playback-state" class="playback-state">Waiting for audio</span>
+          <span id="playback-time" class="subtle">Start a conversation to enable assistant audio.</span>
+          <span id="playback-error" class="playback-error" role="alert"></span>
+        </div>
+        <div id="replay-controls" class="playback-controls" aria-label="Recorded conversation controls" hidden>
+          <button id="replay-toggle" type="button" class="secondary">Play replay</button>
+          <span id="replay-state" class="playback-state">Recording ready</span>
+          <span id="replay-time" class="mono subtle">0:00 / 0:00</span>
+          <label class="subtle" for="replay-seek">Seek</label>
+          <input id="replay-seek" type="range" min="0" max="1000" step="1" value="0" aria-label="Replay position" />
+          <span class="replay-downloads"><a id="download-audio" download>Audio</a><a id="download-events" download>Event log</a></span>
+          <span id="replay-error" class="playback-error" role="alert"></span>
+        </div>
+        <audio id="remote-audio" playsinline></audio>
+      </section>
+
+      <section class="configuration" aria-label="Server configuration">
+        <div><span>Voice model</span><strong id="model">Loading server configuration…</strong></div>
+        <div><span>Delegation</span><strong>Browser-owned client workflow</strong></div>
+        <div><span>Standby</span><strong id="standby">Not yet loaded</strong></div>
+      </section>
+
+      <div class="workspace">
+        <section class="panel captions">
+          <div class="panel-heading"><h2>Independent captions</h2><span>Transcript deltas, not playback proof</span></div>
+          <article><h3>Caller</h3><p id="user-caption">Your transcript appears after session.started.</p></article>
+          <article><h3>Assistant</h3><p id="assistant-caption">Generated speech transcript appears here independently.</p></article>
+          <div class="example">
+            <h3>Exercise the real workflow</h3>
+            <p>“Where is order A-1042?”</p>
+            <p>“Can it arrive Monday instead?”</p>
+            <p>“Yes, request the change.”</p>
+            <p>Before confirming, revise with “Actually, Tuesday” or cancel with “Cancel that.”</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading"><h2>Application tasks</h2><span>Revision and cancellation stay explicit</span></div>
+          <div id="tasks" class="tasks"><p class="empty">No client delegations yet. A spoken “I’ll check” does not create a task.</p></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading"><h2>Event trace</h2><span>Observed events only</span></div>
+          <ol id="trace" class="trace"><li>Waiting for a user-initiated connection.</li></ol>
+        </section>
+      </div>
+
+      <footer>
+        <p>No simulated hosted mode and no browser API key. Order data comes from <code>data/orders.json</code>. A recorded change request is not confirmed delivery. Session finalization is shown only after <code>session.closed</code>.</p>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

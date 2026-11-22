@@ -1,0 +1,11 @@
+{
+  "id": "cr_03fba729-9c09-4bbd-b30e-a945ea651496",
+  "operationId": "item_EmpDxcobEMPiOwOl321Lg",
+  "orderId": "A-1042",
+  "previousDeliveryDate": "2026-11-27",
+  "requestedDate": "2026-11-30",
+  "status": "requested",
+  "createdAt": "2026-11-21T23:56:16.126Z",
+  "cancelledAt": null,
+  "note": "Application change request only; not carrier-confirmed delivery."
+}

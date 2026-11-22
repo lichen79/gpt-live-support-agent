@@ -1,0 +1,47 @@
+{
+  "orders": [
+    {
+      "id": "A-1042",
+      "status": "in_transit",
+      "carrier": "Northstar Parcel",
+      "tracking": "NS-88421042",
+      "destination": {
+        "city": "Lyon",
+        "country": "FR"
+      },
+      "delivery": {
+        "scheduledDate": "2026-11-27",
+        "window": "09:00-12:00"
+      },
+      "items": [
+        {
+          "sku": "IKB-FIELD-01",
+          "name": "Field recorder kit",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "B-2048",
+      "status": "label_created",
+      "carrier": "Northstar Parcel",
+      "tracking": "NS-88422048",
+      "destination": {
+        "city": "Lille",
+        "country": "FR"
+      },
+      "delivery": {
+        "scheduledDate": "2026-12-02",
+        "window": "13:00-17:00"
+      },
+      "items": [
+        {
+          "sku": "MIC-DUPLEX-02",
+          "name": "Duplex microphone",
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "changeRequests": []
+}

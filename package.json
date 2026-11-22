@@ -1,0 +1,14 @@
+{
+  "name": "p119-live-support-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser WebRTC and trusted-server client-delegation demo for GPT-Live-1.1",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
