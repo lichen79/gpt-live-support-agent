@@ -2,9 +2,13 @@
 
 A real browser WebRTC + trusted Node integration for `gpt-live-1.1`, using client delegation and application-owned order tools. There is no simulated hosted mode, no browser API key, and no success UI without an observed API or tool result.
 
-## Verified hosted evidence (21 Nov 2026)
+## Verified hosted evidence (22 Nov 2026)
 
-`evidence/` contains a real 68-second browser recording plus sanitized event samples and the final UI. The successful call used `gpt-live-1.1` over WebRTC with client delegation. The assistant returned A-1042 from `orders.lookup`, accepted a spoken revision to Monday, 30 November 2026, waited for explicit confirmation, recorded `orders.change-request`, and closed with `session.closed` and 62 seconds of reported usage. No API key is included. The persistent request is a request only, not carrier-confirmed delivery.
+The primary demo is [`evidence/support-call-2026-11-22.mp4`](evidence/support-call-2026-11-22.mp4), a **51.267-second, 1920×1080, 30 fps browser recording with H.264 video and AAC stereo audio**.
+
+The real hosted session shows order lookup for **A-1042**, a Monday delivery revision, a correction to Tuesday, cancellation before submission, and `session.closed` with **45 seconds of reported usage**. **No delivery change was recorded**. The final frame also exposes the **0:48 synchronized replay**, audio download, and event-log download. Session ID: `live_u1_En7Olp3oMbHq73iXWfDbNNWSYzrvOcSO`.
+
+The repository also retains an earlier 68-second hosted recording and sanitized event samples as historical evidence. No API key is included.
 
 ## Live audio, recording, and synchronized replay
 
