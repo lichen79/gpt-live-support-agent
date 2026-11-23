@@ -4,7 +4,9 @@ A real browser WebRTC + trusted Node integration for `gpt-live-1.1`, using clien
 
 ## Verified hosted evidence (22 Nov 2026)
 
-The primary demo is [`evidence/support-call-2026-11-22.mp4`](evidence/support-call-2026-11-22.mp4), a **51.267-second, 1920×1080, 30 fps browser recording with H.264 video and AAC stereo audio**. Watch it on YouTube: **[GPT-Live-1.1 Demo: Real Order Support Call with Controlled Cancellation](https://youtu.be/UaZz3ft5sGg)**.
+The primary demo is a **51.267-second, 1920×1080, 30 fps browser recording with H.264 video and AAC stereo audio**. Click the preview to play **[GPT-Live-1.1 Demo: Real Order Support Call with Controlled Cancellation](https://youtu.be/UaZz3ft5sGg)** on YouTube.
+
+<a href="https://youtu.be/UaZz3ft5sGg"><img src="evidence/support-call-play.png" alt="Play the 51-second GPT-Live support-call demo on YouTube" width="560"></a>
 
 The full architecture and implementation walkthrough is **[GPT-Live-1.1: Full-Duplex Voice Agents, WebRTC and Delegation](https://youtu.be/Gy611cJNbQE)** on the VIDEU channel. It includes seven caption tracks and six localized metadata sets.
 
